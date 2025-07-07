@@ -1,4 +1,4 @@
-import livros from '../data/livros.json';
+import livros from '../data/livros.js';
 import LivroCard from '../components/LivroCard';
 import Header from '../components/Header';
 import '../styles/home.css';
