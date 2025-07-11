@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "titulo": "Bíblia Sagrada | NTLH | Salvos Pela Graça |",
+    "descricao": "Esta obra combina a profundidade atemporal das Escrituras com um design moderno, tornando a leitura acessível, bela e impactante, com mensagens de esperança e fé que atravessam gerações e transformam corações.",
+    "preco": 300.00,
+    "imagem": "/img/biblia.webp",
+    "maisVendido": true,
+    "emOferta": false,
+    "novo": true
+  },
+  {
+    "id": 2,
+    "titulo": "Retórica E Teologia Nas Cartas De Paulo",
+    "descricao": "É uma obra aprofundada que analisa as interações entre a retórica e a teologia nas epístolas de Paulo, oferecendo reflexões valiosas sobre seu pensamento e sua mensagem para a igreja primitiva e atual.",
+    "preco": 150.00,
+    "imagem": "/img/cartas.webp",
+    "maisVendido": false,
+    "emOferta": true,
+    "novo": false
+  },
+  {
+    "id": 3,
+    "titulo": "Forte - Devocionais Para Uma Vida Poderosa",
+    "descricao": "Em Forte, Lisa Bevere apresenta devocionais que inspiram uma vida firme na fé, ajudando o leitor a descobrir o verdadeiro significado da força espiritual e a enfrentar os desafios com coragem e sabedoria.",
+    "preco": 50.00,
+    "imagem": "/img/forte.webp",
+    "maisVendido": false,
+    "emOferta": true,
+    "novo": true
+  },
+  {
+    "id": 4,
+    "titulo": "O Cristão Na Teologia De Paulo",
+    "descricao": "Lucien Cerfaux analisa o pensamento paulino sobre o “mistério” de Cristo, revelando o que significa ser cristão segundo as epístolas, numa abordagem teológica profunda e acessível ao público estudioso e leigo.",
+    "preco": 80.00,
+    "imagem": "/img/ocristao.webp",
+    "maisVendido": false,
+    "emOferta": false,
+    "novo": false
+  },
+  {
+    "id": 5,
+    "titulo": "O Deus Que Destrói Sonhos",
+    "descricao": "Rodrigo Bibo nos desafia a repensar nossos planos e sonhos diante da vontade soberana de Deus, mostrando que seguir a Cristo é abandonar expectativas humanas e confiar plenamente no propósito divino.",
+    "preco": 40.00,
+    "imagem": "/img/oDeusqdestroi.webp",
+    "maisVendido": true,
+    "emOferta": false,
+    "novo": false
+  },
+  {
+    "id": 6,
+    "titulo": "O Peregrino",
+    "descricao": "John Bunyan narra a jornada espiritual de Cristão rumo à Cidade Celestial. Uma alegoria da fé, repleta de desafios, encontros e lições que inspiram os leitores a refletirem sobre sua caminhada com Deus.",
+    "preco": 55.00,
+    "imagem": "/img/operegrino.webp",
+    "maisVendido": true,
+    "emOferta": true,
+    "novo": false
+  },
+  {
+    "id": 7,
+    "titulo": "Até Que Nada Mais Importe",
+    "descricao": "Luciano Subirá mostra como o relacionamento com Deus deve ser transformado, baseado na Palavra, revelando que, embora indignos, somos amados por Ele. Um convite à entrega total ao Senhor em verdade e espírito.",
+    "preco": 68.00,
+    "imagem": "/img/ateqnadamais.webp",
+    "maisVendido": false,
+    "emOferta": false,
+    "novo": false
+  },
+  {
+    "id": 8,
+    "titulo": "Pecadores Nas Mãos De Um Deus Irado E Outros Sermões",
+    "descricao": "Com linguagem intensa e profunda, Jonathan Edwards apresenta sermões impactantes que revelam a seriedade do juízo divino, levando os ouvintes a uma reflexão sincera sobre a salvação e a graça de Deus.",
+    "preco": 89.99,
+    "imagem": "/img/pecadores.webp",
+    "maisVendido": false,
+    "emOferta": false,
+    "novo": false
+  },
+
+  
