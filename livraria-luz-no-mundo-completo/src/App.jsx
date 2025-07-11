@@ -1,15 +1,19 @@
+import {BrowserRouter, Routes, Route} from 'react-router'
+
 import './styles/reset.css'
 import './styles/global.css'
 
-import Header from './components/Header'
-import Main from './components/Main'
+import Home from './pages/home'
+import CarrinhoPage from './pages/carrinho'
 
 function App(){
   return(
-    <>
-      <Header />
-      < />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/carrinho' element={<CarrinhoPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

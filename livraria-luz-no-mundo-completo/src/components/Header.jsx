@@ -1,4 +1,7 @@
+import { Link } from 'react-router'
+
 import '../styles/header.css'
+
 import logo from '../assets/images/logo.png'
 import lupa from '../assets/images/lupa.png'
 import carrinhob from '../assets/images/carrinhob.png'
@@ -11,7 +14,9 @@ function Header(){
             <div className="search-top">
                 <div className="logo left-nav">
                     <img src={logo} alt="logo da nossa livraria" />
-                    <h1><a href="index.html">Livraria Luz no Mundo</a></h1>
+                    <Link to={'/'}>
+                        <h1>Livraria Luz no Mundo</h1>
+                    </Link>
                 </div>
                 <form action="#">
                     <div className="search-box">
@@ -34,7 +39,9 @@ function Header(){
                 </form>
                 <div className="right-nav">
                     <div className="cart">
-                        <img src={carrinhob} alt="icone do carrinho de compras" />
+                        <Link to={'/carrinho'}>
+                            <img src={carrinhob} alt="icone do carrinho de compras" />
+                        </Link>
                     </div>
                     <div className="account">
                         <div className="account-bt"><span>Entrar</span></div>

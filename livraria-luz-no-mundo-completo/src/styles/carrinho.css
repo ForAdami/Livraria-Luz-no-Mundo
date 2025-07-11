@@ -1,0 +1,18 @@
+.carrinhoItem{
+    display: flex;
+    gap: 10px;
+}
+
+.quantidadeWrapper{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.quantidadeWrapper button{
+    border: none;
+    padding: 3px;
+}
+.quantidadeWrapper span{
+    padding: 0px 5px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
