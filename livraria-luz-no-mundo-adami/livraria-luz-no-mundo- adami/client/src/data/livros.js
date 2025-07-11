@@ -256,7 +256,227 @@ const livros =[
     "novo": false,
   },
 
-  
+   {
+    "id":23,
+    "titulo": "Devocional Mães De Fé | Roberta Sara",
+    "descricao": "Você sente que está vivendo a maternidade como Deus sonhou para você? Em meio à correria, preocupações com os filhos, rotina pesada e aquela sensação constante de culpa por não estar fazendo o suficiente, muitas mães cristãs se sentem esgotadas. Tentam ser fortes por todos, mas por dentro, estão pedindo socorro em silêncio.",
+    "preco": 39.99,
+    "Categoria": "Devocional",
+    "imagem": "img/devocional_maes_de_fe1.webp" / "img/devocional_maes_de_fe2.webp",
+    "maisVendido": false,
+    "emOferta": false,
+    "novo": true,
+  },
+
+  {
+    "id":24,
+    "titulo": "Demônios da Família | Como Quebrar as Correntes da Opressão Espiritual no Lar",
+    "descricao": "Deseja libertar sua família das influências espirituais negativas e viver em um lar de paz e harmonia? Este livro é um guia poderoso para identificar, confrontar e vencer as forças espirituais que podem afetar a família. Este livro ensina como, por meio da oração, da fé e do entendimento da Palavra de Deus, cada pessoa pode transformar seu lar em um lugar de proteção e vitória espiritual.",
+    "preco": 49.99,
+    "Categoria": "Livros",
+    "imagem": "img/demonios_da_familia1.webp" / "img/demonios_da_familia2.webp",
+    "maisVendido": false,
+    "emOferta": false,
+    "novo": true,
+  },
+
+  {
+    "id":25,
+    "titulo": "Marta, Maria e o Equilíbrio Espiritual - Como as escolhas diárias de Serviço Moldam nossa vida e espiritualidade",
+    "descricao": "Você sente que a correria do dia a dia está afastando você de Deus? No relato bíblico de Marta e Maria, encontramos duas mulheres enfrentando escolhas diárias que refletem os desafios da vida moderna: o desejo de servir e a necessidade de estar na presença de Jesus. Este livro é um convite para você refletir sobre suas prioridades e descobrir como encontrar o equilíbrio entre o serviço e a intimidade espiritual.",
+    "preco": 19.99,
+    "Categoria": "Livros",
+    "imagem": "img/marta_maria1.webp" / "img/marta_maria2.webp",
+    "maisVendido": false,
+    "emOferta": true,
+    "novo": true,
+  },
+
+  {
+    "id":26,
+    "titulo": "Devocional | 40 Dias Com Divertidamente | Uma Jornada Bíblica Através Das Emoções",
+    "descricao": "A ansiedade rouba sua paz? A tristeza parece nunca passar? A raiva toma conta antes que você perceba? Muitas vezes, as emoções dominam nossas reações, afetando nossos relacionamentos, nossa vida espiritual e até nossa comunhão com Deus. Você já se sentiu culpada por sentir medo, vergonha ou inveja, mesmo sabendo que deveria confiar mais no Senhor?",
+    "preco": 39.99,
+    "Categoria": "Devocional",
+    "imagem": "img/devocional_40_dias_com1.webp" / "img/devocional_40_dias_com2.webp",
+    "maisVendido": true,
+    "emOferta": false,
+    "novo": true,
+  },
+
+  {
+    "id":27,
+    "titulo": "Rompendo a Zona de Conforto | Equipe Teológica Penkal",
+    "descricao": "Este livro é um chamado direto para todos aqueles que sabem que foram criados para algo maior, mas têm vivido aquém do seu propósito. Escrito pela Equipe Teológica Penkal, este livro é um guia prático e espiritual para quem deseja abandonar a mediocridade e viver uma fé vibrante, ousada e cheia do poder de Deus.",
+    "preco": 29.99,
+    "Categoria": "Livros",
+    "imagem": "img/rompendo_a_zona1.webp" / "img/rompendo_a_zona2.webp",
+    "maisVendido": false,
+    "emOferta": false,
+    "novo": false,
+  },
+
+  {
+    "id":28,
+    "titulo": "As 5 Linguagens do Amor Segundo a Bíblia - Uma Jornada de Amor e Conexão Baseada na Bíblia",
+    "descricao": "O amor é o maior mandamento de Deus, mas muitos enfrentam dificuldades em expressá-lo e compreendê-lo, o que gera frustrações e conflitos. Este livro é um guia prático que une os ensinamentos bíblicos aos conceitos das cinco linguagens do amor, ajudando você a construir relacionamentos cheios de propósito e harmonia.",
+    "preco": 29.99,
+    "Categoria": "Livros",
+    "imagem": "img/as_5_linguagens_do_amor1.webp" / "img/as_5_linguagens_do_amor2.webp",
+    "maisVendido": false,
+    "emOferta": false,
+    "novo": false,
+  },
+
+  {
+    "id":29,
+    "titulo": "Devocional Saradas Para Sarar | Roberta Sara",
+    "descricao": "O amor é o maior mandamento de Deus, mas muitos enfrentam dificuldades em expressá-lo e compreendê-lo, o que gera frustrações e conflitos. Este livro é um guia prático que une os ensinamentos bíblicos aos conceitos das cinco linguagens do amor, ajudando você a construir relacionamentos cheios de propósito e harmonia.",
+    "preco": 29.99,
+    "Categoria": "Devocional",
+    "imagem": "img/devocional_saradas1.webp" / "img/devocional_saradas2.webp",
+    "maisVendido": false,
+    "emOferta": false,
+    "novo": false,
+  },
+
+  {
+    "id":30,
+    "titulo": "Juventude Transformada | Princípios de vida para a juventude cristã - Kaylon Jhefytte",
+    "descricao": "Vivemos tempos difíceis, onde os valores cristãos são constantemente desafiados, e muitos jovens se perdem no caminho. Como garantir que nossos filhos e netos permaneçam firmes na fé? Como prepará-los para serem luz em meio às trevas? A incerteza sobre o futuro espiritual da nova geração tem tirado o sono de muitos pais, líderes e responsáveis.",
+    "preco": 39.99,
+    "Categoria": "Livros",
+    "imagem": "img/juventude_transformada1.webp" / "img/juventude_transformada2.webp",
+    "maisVendido": false,
+    "emOferta": false,
+    "novo": true,
+  },
+
+  {
+    "id":31,
+    "titulo": "O vício de agradar a todos: viva para Deus e não para o aplauso dos homens",
+    "descricao": "A necessidade de agradar a todos pode ser um peso silencioso, mas devastador. Você já se sentiu pressionado a corresponder às expectativas dos outros? A dizer ?sim? quando queria dizer ?não?? A moldar sua vida para ser aceito, mesmo que isso custe sua paz? Essa busca incessante por aprovação pode impactar sua identidade, minar sua fé e distanciar você do propósito de Deus.",
+    "preco": 15.99,
+    "Categoria": "Livros",
+    "imagem": "img/o_vicio_de_agradar1.webp" / "img/o_vicio_de_agradar2.webp",
+    "maisVendido": false,
+    "emOferta": false,
+    "novo": false,
+  },
+
+  {
+    "id":32,
+    "titulo": "Descontruindo o meu eu | Roberta Sara",
+    "descricao": "Você já sentiu que está presa em padrões que se repetem, mesmo quando deseja profundamente mudar? Como se algo dentro de você sempre sabotasse sua caminhada com Deus, sua autoestima e suas decisões? Muitas mulheres vivem essa realidade silenciosa. A dor não tem nome exato, mas se manifesta em relacionamentos desequilibrados, medo de rejeição, crises de identidade e uma fé que parece travada no tempo.",
+    "preco": 30.99,
+    "Categoria": "Livros",
+    "imagem": "img/descontruindo_o_meu1.webp" / "img/descontruindo_o_meu2.webp",
+    "maisVendido": false,
+    "emOferta": false,
+    "novo": false,
+  },
+
+
+{
+    "id":33,
+    "titulo": "Tempo De Crescimento | Roberta Sara",
+    "descricao": "Em meio à rotina corrida, cobranças familiares, afazeres da casa e preocupações com os filhos e netos, muitas mulheres de fé têm sentido que seu crescimento espiritual está travado. Elas oram, leem a Bíblia, se esforçam? mas parece que nada muda. E aí vem o sentimento de culpa, frustração e até de comparação com outras pessoas que parecem estar ?mais avançadas?.",
+    "preco": 35.99,
+    "Categoria": "Livros",
+    "imagem": "img/tempo_de_crescimento1.webp" / "img/tempo_de_crescimento2.webp",
+    "maisVendido": false,
+    "emOferta": false,
+    "novo": false,
+  },
+
+  {
+    "id":34,
+    "titulo": "Mais Forte Que A Sua Dor | Roberta Sara",
+    "descricao": "Você já sentiu que, mesmo fazendo de tudo pelos outros, algo dentro de você continua quebrado? Palavras duras que você ouviu na infância, o abandono de alguém que você amava, a sensação de nunca ser suficiente... Tudo isso deixa marcas profundas que continuam moldando suas escolhas, suas relações e até sua maneira de se ver diante de Deus.",
+    "preco": 38.99,
+    "Categoria": "Livros",
+    "imagem": "img/mais_forte_que_a_sua_dor1.webp" / "img/mais_forte_que_a_sua_dor2.webp",
+    "maisVendido": false,
+    "emOferta": false,
+    "novo": false,
+  },
+
+  {
+    "id":35,
+    "titulo": "Ciclos Emocionais Viciantes | Roberta Sara",
+    "descricao": "Você se esforça todos os dias, mas no fundo carrega a sensação de estar travada em padrões que machucam. Às vezes gasta mais do que pode, tenta agradar quem nunca te valoriza ou se compara com outras mulheres que parecem ter ?uma vida perfeita?. Você até reconhece que isso faz mal, mas continua repetindo ? e se culpa por isso.",
+    "preco": 40.99,
+    "Categoria": "Livros",
+    "imagem": "img/ciclos_emocionais1.webp" / "img/ciclos_emocionais2.webp",
+    "maisVendido": false,
+    "emOferta": false,
+    "novo": false,
+  },
+
+  {
+    "id":36,
+    "titulo": "Bíblia Sagrada | King James | Letra Normal | Capa Dura | Fé | Slim",
+    "descricao": "A Bíblia King James, possui essas além de muitas outras qualidades. Essa tradução da palavra de Deus tem a sua raiz na Inglaterra clássica, de William Shakespeare, mas também nos conflitos entre reis e igreja protestante e na intenção de dar ao povo a Bíblia em sua própria língua.",
+    "preco": 43.99,
+    "Categoria": "Bíblia",
+    "imagem": "img/biblia_sagrada_kj1.webp" / "img/biblia_sagrada_kj2.webp",
+    "maisVendido": false,
+    "emOferta": false,
+    "novo": true,
+  },
+
+  {
+    "id":37,
+    "titulo": "Mulheres Enraizadas - Penkal",
+    "descricao": "Este livro é a leitura essencial para toda mulher que busca aprofundar sua fé, fortalecer seu espírito e transformar sua vida. Este livro é uma fonte rica de inspiração, sabedoria e encorajamento para aquelas que desejam viver uma vida de propósito e profundidade espiritual.",
+    "preco": 39.99,
+    "Categoria": "Livros",
+    "imagem": "img/mulheres_enraizadas1.webp" / "img/mulheres_enraizadas2.webp",
+    "maisVendido": false,
+    "emOferta": false,
+    "novo": true,
+  },
+
+  {
+    "id":38,
+    "titulo": "Educando Filhos para Glória de Deus - J.C. Ryle",
+    "descricao": "Descubra o caminho para criar filhos que não apenas honrem a Deus, mas também impactem o mundo ao seu redor com o poder transformador da fé. Educando Filhos para a Glória de Deus é um guia essencial para pais comprometidos em transmitir valores cristãos sólidos e eternos para seus filhos.",
+    "preco": 29.99,
+    "Categoria": "Livros",
+    "imagem": "img/educando_filhos1.webp" / "img/educando_filhos2.webp",
+    "maisVendido": false,
+    "emOferta": false,
+    "novo": true,
+  },
+
+  {
+    "id":39,
+    "titulo": "O Propósito da familia - J. Wesley & R. Baxter",
+    "descricao": "O Propósito da Família é um guia inspirador e essencial para qualquer família que deseja descobrir e viver o verdadeiro propósito de seu lar. Este livro oferece uma visão profunda e prática sobre como construir uma família forte, amorosa e direcionada por um propósito comum.",
+    "preco": 39.99,
+    "Categoria": "Livros",
+    "imagem": "img/o_proposito_da_familia1.webp" / "img/o_proposito_da_familia2.webp",
+    "maisVendido": true,
+    "emOferta": false,
+    "novo": true,
+  },
+
+  {
+    "id":40,
+    "titulo": "Homens de Honra |Charles Spurgeon | J. C. Ryle",
+    "descricao": "Este livro retrata a redescoberta da integridade humana, a qual é obtida através da equivalência do caráter humano ao de Cristo. Para sermos pessoas honradas neste mundo de desafios constantes e competitividade acirrada, necessitamos de uma ilustração vivaz acerca da honestidade, que é fundamental à vivência cotidiana e, também, basilar para a expressão de uma nova vida em Jesus Cristo.",
+    "preco": 39.99,
+    "Categoria": "Livros",
+    "imagem": "img/homens_de_honra1.webp" / "img/homens_de_honra2.webp",
+    "maisVendido": false,
+    "emOferta": false,
+    "novo": false,
+  },
+
+
+
+
+
 
 
 
