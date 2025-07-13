@@ -15,8 +15,11 @@ function CarrinhoComponent(){
     }
     function decrease(el){
         const prev= [...Carrinho]
+        const index = Carrinho.indexOf(el)
         if(prev.find(e=>e==el).quantidade==1){
             alert('vc ira apagar o item...... crtz?')
+            CarrinhoItems.splice(index,1)
+            console.log(CarrinhoItems)
             setCarrinho(prev.filter(e=>e.id!==el.id))
         }else{
             prev.find(i=>i==el).quantidade -=1
