@@ -4,18 +4,39 @@ import { useState } from 'react'
 import CarrinhoItems from "../data/carrinho"
 
 
-
 function CarrinhoComponent(){
-    const [quant, setquant] = useState()
+    const [Carrinho,setCarrinho] = useState(CarrinhoItems)
     
-    const CarrinhoMapped = CarrinhoItems.map(el=>(
+    
+    function increase(el){
+        const prev= [...Carrinho]
+        prev.find(i=>i==el).quantidade +=1
+        setCarrinho(prev)
+    }
+    function decrease(el){
+        const prev= [...Carrinho]
+        if(prev.find(e=>e==el).quantidade==1){
+            alert('vc ira apagar o item...... crtz?')
+            setCarrinho(prev.filter(e=>e.id!==el.id))
+        }else{
+            prev.find(i=>i==el).quantidade -=1
+    
+            setCarrinho(prev)
+        }
+    }
+
+
+    const CarrinhoMapped = Carrinho.map(el=>(
         <div className="carrinhoItem" key={el.id}>
             <span>{el.titulo}</span>
             <span>R$ {el.preco}</span>
             <div className="quantidadeWrapper">
-                <button>-</button>
+
+                <button onClick={()=>decrease(el)}>-</button>
+
                 <span>{el.quantidade}</span>
-                <button>+</button>
+                
+                <button onClick={()=>increase(el)}>+</button>
 
             </div>
         </div>
