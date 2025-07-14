@@ -1,0 +1,42 @@
+.carrinhoItem{
+    position: relative;
+    display: flex;
+    gap: 10px;
+    /* background-color: aqua; */
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.1em;
+    height: 200px;
+}
+
+.quantidadeWrapper{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    border: 1px solid black;
+    /* border-radius: 5px; */
+}
+.quantidadeWrapper button{
+    user-select: none;
+    border: none;
+    padding: 5px;
+    font-size: 1.1em;
+}
+.quantidadeWrapper button:hover{
+    cursor: pointer;
+}
+.quantidadeWrapper span{
+    padding: 0px 5px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.total{
+    font-size: 1.5em;
+}
+
+.noItemWarning{
+    margin-top: 5px;
+    font-size: 2em;
+    font-weight: 600;
+}
