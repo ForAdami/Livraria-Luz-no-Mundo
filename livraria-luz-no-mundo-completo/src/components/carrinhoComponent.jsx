@@ -1,9 +1,9 @@
 import '../styles/carrinho.css'
 
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import CarrinhoItems from "../data/carrinho"
 
-function CarrinhoComponent(){
+function CarrinhoComponent({Compra, setCompra}){
     const [Carrinho,setCarrinho] = useState(CarrinhoItems)
     let valores = Carrinho.map(el=>el.preco*el.quantidade)
     let valoresfixed = valores.map(el=>Number(el.toFixed(2)))
@@ -34,8 +34,21 @@ function CarrinhoComponent(){
     }
 
 
+    function teste(event, el){
+        if(event.target.checked){
+            setCompra([...Compra,el])
+            console.log(el.titulo + 'marcado')
+        }else{
+            setCompra(Compra.filter(item=>item.id!==el.id))
+            console.log(el.titulo + 'desmarcado')
+        }
+    }
+    useEffect(() => {
+        console.log('Compra atualizada:', Compra);
+    }, [Compra]);
     const CarrinhoMapped = Carrinho.map(el=>(
         <div className="carrinhoItem" key={el.id}>
+            <input type="checkbox" data-id={el.id} onChange={(event)=>{teste(event, el)}} />
             <span>{el.titulo}</span>
             <span>R$ {el.preco}</span>
             <div className="quantidadeWrapper">
@@ -56,7 +69,9 @@ function CarrinhoComponent(){
     }else{
         return (
             <>
-            <div className="carrinhoItensContainer">{CarrinhoMapped}</div>
+            <div className="carrinhoItensContainer">
+                {CarrinhoMapped}
+            </div>
             <div className="compra-container">
                 <span className='total'>TOTAL: R$ {total.toFixed(2)}</span>
                 <button onClick={comprar}>Comprar</button>

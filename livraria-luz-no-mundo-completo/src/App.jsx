@@ -1,4 +1,5 @@
 import {BrowserRouter, Routes, Route} from 'react-router'
+import { useState } from 'react'
 
 import './styles/reset.css'
 import './styles/global.css'
@@ -8,12 +9,17 @@ import Home from './pages/home'
 import CarrinhoPage from './pages/carrinho'
 
 function App(){
+  const [Carrinho, setCarrinho] = useState([])
+  const [Compra, setCompra] = useState([])
+  const [Total, setTotal] = useState([])
+
+
   return(
     <BrowserRouter>
       <Routes>
         <Route element={<Layout/>}>
           <Route path='/' element={<Home />} />
-          <Route path='/carrinho' element={<CarrinhoPage />} />
+          <Route path='/carrinho' element={<CarrinhoPage Carrinho={Carrinho} setCarrinho={setCarrinho} Compra={Compra} setCompra={setCompra} Total={Total} setTotal={setTotal} />} />
         </Route>
       </Routes>
     </BrowserRouter>

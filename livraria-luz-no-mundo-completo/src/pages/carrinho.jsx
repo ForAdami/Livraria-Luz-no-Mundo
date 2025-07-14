@@ -2,10 +2,10 @@
 import CarrinhoItems from "../data/carrinho";
 import CarrinhoComponent from "../components/carrinhoComponent";
 
-function CarrinhoPage(){
+function CarrinhoPage({Carrinho,setCarrinho,Compra, setCompra, Total, setTotal}){
     return(
         <>
-            <CarrinhoComponent />
+            <CarrinhoComponent Carrinho={Carrinho} setCarrinho={setCarrinho} Compra={Compra} setCompra={setCompra} Total={Total} setTotal={setTotal} />
         </>
     )
 }

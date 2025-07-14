@@ -1,6 +1,7 @@
 .carrinhoItem{
     position: relative;
     display: flex;
+    align-items: center;
     gap: 10px;
     /* background-color: aqua; */
     margin-top: 20px;
@@ -10,9 +11,7 @@
 }
 
 .quantidadeWrapper{
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
+    height: fit-content;
     border: 1px solid black;
     /* border-radius: 5px; */
 }
