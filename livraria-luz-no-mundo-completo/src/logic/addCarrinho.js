@@ -6,7 +6,6 @@ const AddAoCarrinho=(id)=>{
 
     if(CarrinhoItems.find(el=>el.id==id)){
         CarrinhoItems.find(el=>el.id==id).quantidade +=1
-        console.log(CarrinhoItems)
     }else{
         CarrinhoItems.push({...produto,quantidade:1})
     }

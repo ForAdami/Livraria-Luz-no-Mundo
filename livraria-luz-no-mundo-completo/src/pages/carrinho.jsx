@@ -4,7 +4,9 @@ import CarrinhoComponent from "../components/carrinhoComponent";
 
 function CarrinhoPage(){
     return(
-        <CarrinhoComponent />
+        <>
+            <CarrinhoComponent />
+        </>
     )
 }
 
