@@ -83,8 +83,8 @@ function Header(){
                         </Link>
                     </div>
                     <div className="account">
-                        <div className="account-bt"><span>Entrar</span></div>
-                        <div className="account-bt"><span>Registrar</span></div>
+                        <div className="account-bt"><span><Link to={'/*'}>Entrar</Link></span></div>
+                        <div className="account-bt"><span><Link to={'/*'}>Registrar</Link></span></div>
                     </div>
                 </div>
             </div>
