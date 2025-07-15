@@ -1,54 +1,57 @@
 import '../styles/carrinho.css'
 
-import { useState,useEffect } from 'react'
-import CarrinhoItems from "../data/carrinho"
-
-function CarrinhoComponent({Compra, setCompra}){
-    const [Carrinho,setCarrinho] = useState(CarrinhoItems)
-    let valores = Carrinho.map(el=>el.preco*el.quantidade)
-    let valoresfixed = valores.map(el=>Number(el.toFixed(2)))
-    let total = valoresfixed.reduce((Acc,num)=>Acc+num,0)
+function CarrinhoComponent({Carrinho,setCarrinho,Compra, setCompra, Total, setTotal}){
     
-    function comprar(){
-        setCarrinho([])
-        CarrinhoItems.splice(0)
-        alert('Compra Realizada')
+    function attCompra(el){
+        setCompra((prevCompra)=>{
+            const jaTem = prevCompra.find(item=>item.id==el.id)
+            if(jaTem){
+                return Carrinho
+            }else{
+                return [...prevCompra]
+            }
+        })
+
     }
 
     function increase(el){
         const prev= [...Carrinho]
         prev.find(i=>i==el).quantidade +=1
         setCarrinho(prev)
+        attCompra(el)
     }
     function decrease(el){
         const prev= [...Carrinho]
-        const index = Carrinho.indexOf(el)
-        if(prev.find(e=>e==el).quantidade==1){
+        if(prev.find(e=>e.id==el.id).quantidade==1){
             alert('vc ira apagar o item...... crtz?')
-            CarrinhoItems.splice(index,1)
-            setCarrinho(prev.filter(e=>e.id!==el.id))
+            setCarrinho(prev.filter(item=>item.id!==el.id))
+            setCompra(Compra.filter(item=>item.id!==el.id))
         }else{
             prev.find(i=>i==el).quantidade -=1
             setCarrinho(prev)
+            attCompra(el)
         }
     }
 
 
-    function teste(event, el){
+    function itemMarked(event, el){
         if(event.target.checked){
             setCompra([...Compra,el])
-            console.log(el.titulo + 'marcado')
         }else{
             setCompra(Compra.filter(item=>item.id!==el.id))
-            console.log(el.titulo + 'desmarcado')
         }
     }
-    useEffect(() => {
-        console.log('Compra atualizada:', Compra);
-    }, [Compra]);
+
+
     const CarrinhoMapped = Carrinho.map(el=>(
         <div className="carrinhoItem" key={el.id}>
-            <input type="checkbox" data-id={el.id} onChange={(event)=>{teste(event, el)}} />
+            <input 
+                type="checkbox"
+                className='checkItem'
+                data-id={el.id} 
+                checked={Compra.some(item=>item.id==el.id)} 
+                onChange={(event)=>{itemMarked(event, el)}}
+            />
             <span>{el.titulo}</span>
             <span>R$ {el.preco}</span>
             <div className="quantidadeWrapper">
@@ -62,7 +65,7 @@ function CarrinhoComponent({Compra, setCompra}){
             </div>
         </div>
     ))
-    if(CarrinhoItems.length==0){
+    if(Carrinho.length==0){
         return (
             <p className='noItemWarning'>Nenhum item no carrinho!</p>
         )
@@ -73,8 +76,8 @@ function CarrinhoComponent({Compra, setCompra}){
                 {CarrinhoMapped}
             </div>
             <div className="compra-container">
-                <span className='total'>TOTAL: R$ {total.toFixed(2)}</span>
-                <button onClick={comprar}>Comprar</button>
+                <span className='total'>TOTAL: R$ {Total}</span>
+                <button>Continuar</button>
             </div>
             </>
         )

@@ -1,14 +1,23 @@
 import Livros from '../data/livros.js'
-import CarrinhoItems from '../data/carrinho.js'
 
-const AddAoCarrinho=(id)=>{
+const AddAoCarrinho=(id, setCarrinho)=>{
     const produto = Livros.find(el=>el.id==id)
+    setCarrinho((prevCarrinho)=>{
+        const jaTem = prevCarrinho.find(el=>el.id==id)
 
-    if(CarrinhoItems.find(el=>el.id==id)){
-        CarrinhoItems.find(el=>el.id==id).quantidade +=1
-    }else{
-        CarrinhoItems.push({...produto,quantidade:1})
-    }
+        if(jaTem){
+            const novoCarrinho = prevCarrinho.map(item=>{
+                if(item.id == produto.id){
+                    return {...item, quantidade:item.quantidade+1}
+                }else{
+                    return item
+                }
+            })
+            return novoCarrinho
+        }else{
+            return [...prevCarrinho, {...produto, quantidade:1}]
+        }
+    })
 }
 
 export default AddAoCarrinho
