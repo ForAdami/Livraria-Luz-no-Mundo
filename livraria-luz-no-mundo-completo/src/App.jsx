@@ -7,6 +7,7 @@ import './styles/global.css'
 import Layout from './components/layout'
 import Home from './pages/home'
 import CarrinhoPage from './pages/carrinho'
+import CompraPage from './pages/compra'
 
 function App(){
   const [Carrinho, setCarrinho] = useState([])
@@ -30,6 +31,7 @@ function App(){
         <Route element={<Layout/>}>
           <Route path='/' element={<Home setCarrinho={setCarrinho} />} />
           <Route path='/carrinho' element={<CarrinhoPage Carrinho={Carrinho} setCarrinho={setCarrinho} Compra={Compra} setCompra={setCompra} Total={Total} setTotal={setTotal} />} />
+          <Route path='/compra' element={<CompraPage Compra={Compra} setCompra={setCompra} />} />
         </Route>
       </Routes>
     </BrowserRouter>

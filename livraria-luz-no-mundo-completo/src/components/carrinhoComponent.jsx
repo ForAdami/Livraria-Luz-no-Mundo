@@ -1,4 +1,5 @@
 import '../styles/carrinho.css'
+import { Navigate, useNavigate } from 'react-router'
 
 function CarrinhoComponent({Carrinho,setCarrinho,Compra, setCompra, Total, setTotal}){
     
@@ -42,6 +43,7 @@ function CarrinhoComponent({Carrinho,setCarrinho,Compra, setCompra, Total, setTo
         }
     }
 
+    const navigate = useNavigate()
 
     const CarrinhoMapped = Carrinho.map(el=>(
         <div className="carrinhoItem" key={el.id}>
@@ -77,7 +79,7 @@ function CarrinhoComponent({Carrinho,setCarrinho,Compra, setCompra, Total, setTo
             </div>
             <div className="compra-container">
                 <span className='total'>TOTAL: R$ {Total}</span>
-                <button>Continuar</button>
+                <button onClick={()=>navigate('/compra')}>Continuar</button>
             </div>
             </>
         )

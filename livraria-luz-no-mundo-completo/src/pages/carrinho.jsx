@@ -1,5 +1,3 @@
-
-import CarrinhoItems from "../data/carrinho";
 import CarrinhoComponent from "../components/carrinhoComponent";
 
 function CarrinhoPage({Carrinho,setCarrinho,Compra, setCompra, Total, setTotal}){
