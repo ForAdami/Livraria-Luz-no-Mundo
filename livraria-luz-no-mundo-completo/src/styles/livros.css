@@ -1,0 +1,67 @@
+.livros-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* CARD */
+.livro-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.livro-card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGEM */
+.livro-imagem {
+  width: 100%;
+  aspect-ratio: 1 / 1.2;
+  object-fit: cover;
+}
+
+/* INFO */
+.livro-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+/* TÍTULO */
+.livro-titulo {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+
+/* PREÇO */
+.livro-preco {
+  font-size: 14px;
+  color: #2b0b00;
+  margin: 0 0 10px;
+}
+
+/* BOTÃO */
+.livro-info button {
+  background-color: #2B0B00;
+  color: #FFE6D1;
+  border: none;
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.livro-info button:hover {
+  background-color: #681a00;
+}
