@@ -1,77 +1,184 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
 .compra {
+  max-width: 900px;
+  margin: 2rem auto;
   padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-  font-family: Arial, sans-serif;
-  color: #222;
+  background-color: #f6f1e9; /* tom bege claro sem rosa */
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(88, 61, 1, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
+/* TÍTULOS DAS SEÇÕES */
+section h3 {
+  font-size: 1.6rem;
+  color: #583d01;
+  margin-bottom: 1rem;
+}
+
+/* SEÇÕES */
 section {
-  margin-bottom: 2rem;
+  background-color: #fefcf8; /* branco com um toque amarelado */
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e3d5bd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.04);
 }
 
-h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 0.5rem;
+/* DADOS DO USUÁRIO */
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.wrapper,
-.user-dados,
-.user-endereco {
+.user-dados, .user-endereco {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
+  color: #3f2525;
+  font-size: 0.95rem;
 }
 
-.produto {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  padding: 1rem;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  background-color: #fafafa;
-}
-
+/* PRODUTOS */
 .lista-produtos {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.pagamento .opcoes-pagamento {
+.produto {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 0.5rem;
+  background-color: #fff;
+  border: 1px solid #d6c3a3;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+}
+
+.produto span {
+  min-width: 120px;
+  font-size: 0.95rem;
+  color: #3f2525;
+  font-weight: 500;
+}
+
+/* PAGAMENTO */
+.opcoes-pagamento {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .opcao {
+  flex: 1 1 130px;
+  background-color: #fdf1db;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.4rem;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  cursor: pointer;
-  width: 140px;
-  background-color: #f0f0f0;
-  transition: background-color 0.2s;
-}
-
-.opcao:hover {
-  background-color: rgba(173, 216, 230, 0.582);
 }
 
 .opcao img {
-    width: 40px;
-    height: auto;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
 }
-.opcao.selecionado{
-    background-color: rgba(173, 216, 230, 0.425);
-    border: 1px solid rgb(147, 211, 233);
+
+.opcao span {
+  font-weight: 600;
+  color: #583d01;
+}
+
+.opcao:hover {
+  background-color: #f0dfc3;
+  transform: translateY(-2px);
+}
+
+.opcao.selecionado {
+  border-color: #583d01;
+  background-color: #e7d0ac;
+}
+
+.pag-error{
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+/* RESUMO */
+.resumo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#totalGeral {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #3f2525;
+}
+
+#botaoComprar {
+  background-color: #c7baa8;
+  color: #3f2525;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#botaoComprar:hover {
+  background-color: #441404;
+  color: #FFE6D1;
+}
+
+.hidden{
+  display: none;
+}
+#compra-pop-up{
+  font-weight: bold;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .resumo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .opcoes-pagamento {
+    flex-direction: column;
+  }
+
+  .opcao {
+    width: 100%;
+  }
 }

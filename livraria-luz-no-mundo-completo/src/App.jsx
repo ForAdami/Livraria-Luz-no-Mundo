@@ -15,6 +15,11 @@ function App(){
   const [Total, setTotal] = useState(0)
 
   useEffect(()=>{
+    console.log('Compra:',Compra)
+    console.log('carrinho:',Carrinho)
+  },[Carrinho, Compra])
+
+  useEffect(()=>{
     if(Compra.length==0){
       setTotal(0)
     }else{
@@ -31,7 +36,7 @@ function App(){
         <Route element={<Layout/>}>
           <Route path='/' element={<Home setCarrinho={setCarrinho} />} />
           <Route path='/carrinho' element={<CarrinhoPage Carrinho={Carrinho} setCarrinho={setCarrinho} Compra={Compra} setCompra={setCompra} Total={Total} setTotal={setTotal} />} />
-          <Route path='/compra' element={<CompraPage Compra={Compra} setCompra={setCompra} />} />
+          <Route path='/compra' element={<CompraPage Carrinho={Carrinho} setCarrinho={setCarrinho} Compra={Compra} setCompra={setCompra} />} />
         </Route>
       </Routes>
     </BrowserRouter>

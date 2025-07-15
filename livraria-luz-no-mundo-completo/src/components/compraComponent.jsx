@@ -6,8 +6,10 @@ import cartaocredito from '../assets/images/cartaocredito.png';
 import cartaodebito from '../assets/images/cartaodebito.png';
 import boleto from '../assets/images/boleto.png';
 
-export default function CompraComponent({ Compra, setCompra }) {
+export default function CompraComponent({Carrinho, setCarrinho, Compra, setCompra }) {
     const [selecionado, setSelecionado] = useState(null)
+    const [escondido, setEscondido] = useState(false)
+    const [erro, setErro] = useState(false)
 
     const produtos = Compra.map(item => {
         const totalItem = item.preco * item.quantidade;
@@ -21,6 +23,27 @@ export default function CompraComponent({ Compra, setCompra }) {
             </div>
         );
     });
+    const totalGeral = Compra.map(item=>{
+        return item.preco*item.quantidade
+    })
+    const EachItensSum = totalGeral.reduce((acc, num)=> acc+num,0)
+    const totalAllItens = EachItensSum.toFixed(2) 
+
+    function comprarFunc(){
+        if(selecionado!==null){
+            setEscondido(true)
+            setErro(false)
+            const carrinhoSemCompra = Carrinho.filter(el=>{
+                if(Compra.find(item=>item.id!==el.id)){
+                    return el
+                }
+            })
+            setCompra([])
+            setCarrinho([...carrinhoSemCompra])
+        }else{
+            setErro(true)
+        }
+    }
 
     return (
         <div className="compra">
@@ -65,10 +88,28 @@ export default function CompraComponent({ Compra, setCompra }) {
                         <span>Boleto Bancário</span>
                     </div>
                 </div>
+                <span
+                className={erro?'pag-error':'hidden'}
+                >Selecione a forma de pagamento! *</span>
             </section>
 
             <section className="resumo">
-                {/* Aqui você pode somar os totais e mostrar o valor final */}
+                <span
+                id='totalGeral'
+                className={escondido?'hidden':''}>
+                    Total Geral: R$ {totalAllItens}
+                </span>
+                <button 
+                id='botaoComprar'
+                className={escondido?'hidden':''}
+                onClick={()=>{
+                    if(Compra.length!==0){
+                        comprarFunc()
+                    }
+                }}>
+                    Comprar
+                </button>
+                <span className={escondido?'':'hidden'} id='compra-pop-up'>Compra Realizada!</span>
             </section>
         </div>
     );

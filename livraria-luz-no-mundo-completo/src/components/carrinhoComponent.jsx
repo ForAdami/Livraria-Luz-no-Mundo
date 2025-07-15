@@ -1,7 +1,9 @@
 import '../styles/carrinho.css'
 import { Navigate, useNavigate } from 'react-router'
+import { useState } from 'react'
 
 function CarrinhoComponent({Carrinho,setCarrinho,Compra, setCompra, Total, setTotal}){
+    const [escondido,setEscondido] = useState(false)
     
     function attCompra(el){
         setCompra((prevCompra)=>{
@@ -14,7 +16,6 @@ function CarrinhoComponent({Carrinho,setCarrinho,Compra, setCompra, Total, setTo
         })
 
     }
-
     function increase(el){
         const prev= [...Carrinho]
         prev.find(i=>i==el).quantidade +=1
@@ -33,8 +34,6 @@ function CarrinhoComponent({Carrinho,setCarrinho,Compra, setCompra, Total, setTo
             attCompra(el)
         }
     }
-
-
     function itemMarked(event, el){
         if(event.target.checked){
             setCompra([...Compra,el])
@@ -55,7 +54,7 @@ function CarrinhoComponent({Carrinho,setCarrinho,Compra, setCompra, Total, setTo
                 onChange={(event)=>{itemMarked(event, el)}}
             />
             <span>{el.titulo}</span>
-            <span>R$ {el.preco}</span>
+            <span>R$ {el.preco.toFixed(2)}</span>
             <div className="quantidadeWrapper">
 
                 <button onClick={()=>decrease(el)}>-</button>
@@ -77,9 +76,22 @@ function CarrinhoComponent({Carrinho,setCarrinho,Compra, setCompra, Total, setTo
             <div className="carrinhoItensContainer">
                 {CarrinhoMapped}
             </div>
+
+            <span
+            className={escondido?'selecione-produto-popUp':'hidden'}
+            >Selecione um produto!</span>
+
             <div className="compra-container">
-                <span className='total'>TOTAL: R$ {Total}</span>
-                <button onClick={()=>navigate('/compra')}>Continuar</button>
+                <span className='total'>TOTAL: R$ {Total.toFixed(2)}</span>
+                <button onClick={()=>{
+                    if(Compra.length!==0){
+                        setEscondido(false)
+                        navigate('/compra')
+                    }else{
+                        setEscondido(true)
+                    }
+                }
+                }>Continuar</button>
             </div>
             </>
         )
