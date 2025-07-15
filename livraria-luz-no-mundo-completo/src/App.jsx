@@ -8,6 +8,7 @@ import Layout from './components/layout'
 import Home from './pages/home'
 import CarrinhoPage from './pages/carrinho'
 import CompraPage from './pages/compra'
+import NotFound from './pages/notFound'
 
 function App(){
   const [Carrinho, setCarrinho] = useState([])
@@ -38,6 +39,7 @@ function App(){
           <Route path='/carrinho' element={<CarrinhoPage Carrinho={Carrinho} setCarrinho={setCarrinho} Compra={Compra} setCompra={setCompra} Total={Total} setTotal={setTotal} />} />
           <Route path='/compra' element={<CompraPage Carrinho={Carrinho} setCarrinho={setCarrinho} Compra={Compra} setCompra={setCompra} />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )

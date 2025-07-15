@@ -52,10 +52,10 @@ function Header(){
             <div className="search-bottom">
                 <nav>
                     <ul>
-                        <li><a href="#">Biblioteca</a></li>
-                        <li><a href="#">Mais Vendidos</a></li>
-                        <li><a href="#">Ofertas</a></li>
-                        <li><a href="#">Novidades</a></li>
+                        <li><Link to={'/'}>Biblioteca</Link></li>
+                        <li><Link to={'/*'}>Mais Vendidos</Link></li>
+                        <li><Link to={'/*'}>Ofertas</Link></li>
+                        <li><Link to={'/*'}>Novidades</Link></li>
                     </ul>
                 </nav>
                 <p style={{color: "#583d01"}}>Frete <span>Grátis</span> na Primeira Compra!</p>
